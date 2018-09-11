@@ -10,18 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_21_193049) do
+ActiveRecord::Schema.define(version: 2018_09_11_140925) do
 
   create_table "channel_memberships", force: :cascade do |t|
-    t.integer "player_id"
     t.integer "channel_id"
+    t.integer "player_id"
     t.boolean "admin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["channel_id"], name: "index_channel_memberships_on_channel_id"
     t.index ["player_id"], name: "index_channel_memberships_on_player_id"
   end
 
   create_table "channels", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "messages", force: :cascade do |t|

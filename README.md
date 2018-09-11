@@ -44,6 +44,12 @@ We need to create the database tables according to this ERD:
 
 `rake db:rollback`
 
+## Models
+
+- Create one model per table
+- Relationships are created in the model
+- Models are singular
+
 ## Validations
 
 [Active Record Validations](http://guides.rubyonrails.org/active_record_validations.html)
